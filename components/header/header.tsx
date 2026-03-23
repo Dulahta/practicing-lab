@@ -6,7 +6,7 @@ export default function Header() {
         <header id="header" className={classes.header}>
             <nav>
                 <ul>
-                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/">Catalogue</Link></li>
                     <li><Link href="/products/new">New Products!</Link></li>
                     <li><Link href="/products/promo">Promotional Products!</Link></li>
                 </ul>
