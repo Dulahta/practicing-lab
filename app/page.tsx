@@ -1,9 +1,16 @@
+export const revalidate = 30;
+
 import ProductCard from "@/components/productCard/productCard";
 import classes from "./page.module.css";
 import { getNewProducts, getPromoProducts } from "@/lib/getProducts";
 import Link from "next/link";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [newProducts, promoProducts] = await Promise.all([
+    getNewProducts(),
+    getPromoProducts()
+  ]);
+
   return (
     <main className={classes.main}>
       <div className={classes.hero}>
@@ -17,7 +24,7 @@ export default function HomePage() {
           <Link href="/products/new" className={classes.viewAll}>View all →</Link>
         </div>
         <ul className={classes.productGrid}>
-          {getNewProducts().slice(0, 3).map(product => (
+          {newProducts.slice(0, 3).map(product => (
             <li key={product.id}>
               <ProductCard product={product} />
             </li>
@@ -31,7 +38,7 @@ export default function HomePage() {
           <Link href="/products/promo" className={classes.viewAll}>View all →</Link>
         </div>
         <ul className={classes.productGrid}>
-          {getPromoProducts().slice(0, 3).map(product => (
+          {promoProducts.slice(0, 3).map(product => (
             <li key={product.id}>
               <ProductCard product={product} />
             </li>
