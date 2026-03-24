@@ -1,0 +1,94 @@
+.item {
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+}
+
+.completedTitle {
+  margin: 0;
+  font-size: 18px;
+  color: #7a7a7a;
+  text-decoration: line-through;
+}
+
+.description {
+  margin: 0 0 16px 0;
+  color: #555555;
+}
+
+.editButton,
+.saveButton,
+.cancelButton {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.editButton,
+.saveButton {
+  background: #111111;
+  color: white;
+}
+
+.cancelButton {
+  background: #ececec;
+  color: #222222;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.error {
+  color: #c62828;
+  font-size: 14px;
+  margin: 0;
+}
+
+.success {
+  color: #1b7f3b;
+  font-size: 14px;
+  margin: 0;
+}
