@@ -1,0 +1,68 @@
+.form {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+.group {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #111111;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 6px;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.errorMessage {
+  margin-top: 12px;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.success {
+  margin-top: 12px;
+  color: #1b7f3b;
+  font-size: 14px;
+}

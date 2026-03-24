@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.sideActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actionButton,
+.deleteButton {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.actionButton {
+  background: #222222;
+  color: white;
+}
+
+.deleteButton {
+  background: #d32f2f;
+  color: white;
+}
+
+.empty {
+  color: #666666;
+}
