@@ -1,9 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div>Hello World
-    </div>
-  );
+export default async function HomePage() {
+  const session = await getServerSession(authOptions);
+  
+    if (!session?.user?.id) {
+      redirect("/login");
+    } else {
+      redirect("/dashboard");
+    }
 }
