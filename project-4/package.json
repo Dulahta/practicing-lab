@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "next-auth": "^4.24.13"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13"
+  }
+}
